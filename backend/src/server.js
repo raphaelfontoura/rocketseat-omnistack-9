@@ -1,7 +1,13 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const routes = require('./routes'); //usando o caminho relativo para que o app não busque nas bibliotecas o recurso.
 
 const app = express();
+
+mongoose.connect('mongodb+srv://omnistack:omnistack@omnistack-fe2fx.mongodb.net/semana09?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
 // GET, POST, PUT, DELETE
 // utilizar o insomnia rest para testar as rotas com os verbos HTTP acima.
@@ -14,5 +20,6 @@ app.use(express.json());
 app.use(routes);
 
 // Usaremos como banco de dados o MongoDB e o mesmo será disponibilizado no mongodb atlas. http://mongodb.com/cloud/atlas
+// npm add mongoose
 
 app.listen(3333);
