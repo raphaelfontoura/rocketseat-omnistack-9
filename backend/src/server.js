@@ -16,7 +16,12 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@omnistack-fe2fx.mongodb.net/
 // req.params -> Acessar route params (para edição e delete))
 // req.body -> Acessar o corpo da requisição (para criação ou edição de registros)
 
+//para receber e enviar json nas rotas
 app.use(express.json());
+
+//para conseguir receber requisições Multipart no body (imagens, textos, arquivos, etc...)
+//será necessário adicionar outra modulo --> npm add multer
+
 app.use(routes);
 
 // Usaremos como banco de dados o MongoDB e o mesmo será disponibilizado no mongodb atlas. http://mongodb.com/cloud/atlas

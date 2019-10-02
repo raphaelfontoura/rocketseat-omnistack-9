@@ -13,3 +13,11 @@ para colocar o nodemon como modo dev para testes sem precisar ficar reiniciando 
     "dev": "nodemon src/server.js"
   },
 5. rodar o ambiente de desenvolvimento com $ npm run dev
+
+# Configurando o acesso ao MongoDB
+1. npm add mongoose
+
+# Permitindo os requests de Multipart (documentos, imagens, etc.)
+1. npm add multer
+
+
