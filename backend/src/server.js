@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
+
 const routes = require('./routes'); //usando o caminho relativo para que o app não busque nas bibliotecas o recurso.
 
 const app = express();
@@ -15,6 +17,9 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@omnistack-fe2fx.mongodb.net/
 // o ideal é utilizar os recursos em ingles e no plural.
 // req.params -> Acessar route params (para edição e delete))
 // req.body -> Acessar o corpo da requisição (para criação ou edição de registros)
+
+//app.use(cors({ origin: 'http://localhost:3333'}));
+app.use(cors());
 
 //para receber e enviar json nas rotas
 app.use(express.json());
