@@ -13,7 +13,13 @@ function App() {
     const response = await api.post('/sessions', {
       email
     });
-    console.log(response);
+
+    const { _id } = response.data;
+
+    localStorage.setItem('user', _id); //um storage do próprio navegador.
+//este localStorage pode ser visto pela ferramenta do desenvolvedor do navegador, em application, na parte de Storage, Local Storage, página da aplicação.
+
+    //console.log(_id);
   }
 
   return (
