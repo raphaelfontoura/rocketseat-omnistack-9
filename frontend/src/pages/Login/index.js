@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import api from '../../services/api';
 
-export default function Login(){
+export default function Login( { history } ){
     const [email, setEmail] = useState(''); // estado da sessão
 
     async function handleSubmit(event) {
@@ -17,6 +17,7 @@ export default function Login(){
   //este localStorage pode ser visto pela ferramenta do desenvolvedor do navegador, em application, na parte de Storage, Local Storage, página da aplicação.
   
       //console.log(_id);
+      history.push('./dashboard');
     }
 
     return (
