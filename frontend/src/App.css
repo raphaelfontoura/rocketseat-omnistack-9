@@ -59,6 +59,12 @@ body, input, button {
   margin-bottom: 8px;
 }
 
+.content form label span {
+  font-weight: normal;
+  color: #999;
+  font-size: 12px;
+}
+
 .content form input {
   margin-bottom: 20px;
   border: 1px solid #ddd;
@@ -83,4 +89,28 @@ body, input, button {
 
 .content button.btn:hover {
   background: #e14f50;
+}
+
+label#thumbnail {
+  margin-bottom: 20px;
+  border: 1px dashed #ddd;
+  background-size: cover;
+  cursor: pointer;
+  height: 160px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label#thumbnail input {
+  display: none;
+}
+
+label#thumbnail.has-thumbnail {
+  border: 0;
+}
+
+label#thumbnail.has-thumbnail img {
+  display: none;
 }
