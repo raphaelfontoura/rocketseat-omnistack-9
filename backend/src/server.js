@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 
 const routes = require('./routes'); //usando o caminho relativo para que o app não busque nas bibliotecas o recurso.
 
@@ -23,6 +24,8 @@ app.use(cors());
 
 //para receber e enviar json nas rotas
 app.use(express.json());
+
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads'))); //express.static server para fornecer arquivos estáticos como pdf, imagens, etc.
 
 //para conseguir receber requisições Multipart no body (imagens, textos, arquivos, etc...)
 //será necessário adicionar outra modulo --> npm add multer
