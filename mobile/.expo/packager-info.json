@@ -1,6 +1,9 @@
 {
-  "expoServerPort": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 23723,
+  "expoServerNgrokUrl": "https://5p-wmj.anonymous.mobile.exp.direct",
+  "packagerNgrokUrl": "https://packager.5p-wmj.anonymous.mobile.exp.direct",
+  "ngrokPid": 23747
 }
