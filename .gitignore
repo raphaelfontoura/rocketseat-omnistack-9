@@ -6,6 +6,8 @@ frontend/node_modules
 frontend/.pnp
 frontend/.pnp.js
 
+mobile/node_modules
+
 # testing
 frontend/coverage
 

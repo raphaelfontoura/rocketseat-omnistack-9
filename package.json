@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "core-js": "^3.2.1",
-    "global": "^4.4.0",
-    "react-native": "^0.61.2"
-  }
-}
